@@ -120,6 +120,10 @@ class Actions {
 			return; // @codeCoverageIgnore
 		}
 
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		// Add main admin bar node.
 		$args[] = [
 			'id'    => 'plausible-analytics',
